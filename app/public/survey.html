@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FriendFinder</title>
+
+    <!-- Font Awesome Glyphicons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 22px;
+            margin-top: 20px;
+            color: #343a40;
+        }
+        h4 {
+            font-size: 16px;
+            line-height: 16px;
+        }
+        a {
+            color: green;
+        }
+        .fontT {
+            font-family: 'Montserrat', sans-serif;
+        }
+        select {
+            font-size: 14px;
+            color: green;
+            border-color: green;
+            border-width: 1.5px;
+            background-color: white;
+
+        }
+        option {
+            font-size: 14px;
+            color: green;
+            background-color: white;
+        }
+        .form-control {
+            font-size: 14px;
+            color: green;
+            border-color: green;
+            border-width: 1.5px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="bg-dark text-white fontT p-4"> Survey Questions</h1>
+
+        <form class="pl-4">
+            <h2 class="mt-4">About you</h2>
+            <div class="form-group">
+                <label for="name">Name (Required)</label>
+                <input type="text" class="form-control" id="name" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="photo">Link to Photo Image (Required)</label>
+                <input type="text" class="form-control" id="photoURL" placeholder="">
+            </div>
+
+            <h3 class="text-dark">Question 1</h3>
+            <h4>You enjoy avocado toast.</h4>
+            <select class="chosen-select" id="q1">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h3 class="text-dark">Question 2</h3>
+            <h4>Most days when you fall asleep, you dream of Javascript.</h4>
+            <select class="chosen-select" id="q2">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h3 class="text-dark">Question 3</h3>
+            <h4>You enjoy eating sushi.</h4>
+            <select class="chosen-select" id="q3">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h3 class="text-dark">Question 4</h3>
+            <h4>You employ many different modules in your Javascript files.</h4>
+            <select class="chosen-select" id="q4">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h3 class="text-dark">Question 5</h3>
+            <h4>The most important thing about a person is how knowledgeable they are about busses.</h4>
+            <select class="chosen-select" id="q5">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h3 class="text-dark">Question 6</h3>
+            <h4>MySQL is a great language.</h4>
+            <select class="chosen-select" id="q6">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h3 class="text-dark">Question 7</h3>
+            <h4>Los Angeles is a great city.</h4>
+            <select class="chosen-select" id="q7">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h3 class="text-dark">Question 8</h3>
+            <h4>IPv6 is better than IPv4.</h4>
+            <select class="chosen-select" id="q8">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h3 class="text-dark">Question 9</h3>
+            <h4>The most dangerous thing in programming is unsanitized input.</h4>
+            <select class="chosen-select" id="q9">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h3 class="text-dark">Question 10</h3>
+            <h4>It's fun to use string concatenation to make HTML.</h4>
+            <select class="chosen-select" id="q10">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <br>
+
+            <button type="submit" class="btn btn-dark btn-lg btn-block" id="submitsurvey"><i class="fa fa-check-circle"
+                    aria-hidden="true"></i>
+                Submit</button>
+
+            <hr>
+        </form>
+
+        <!-- Modal Section -->
+        <div class="modal fade" id="modalMatch" tabindex="-1" role="dialog" aria-labelledby="modalMatch"
+            aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header card_header_color">
+                        <h3 class="text-center" id="modalMatch">The BEST MATCH is:</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        Here the image and name
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $("#submitsurvey").on("click", function (event) {
+                event.preventDefault();
+                //// PENDING VALIDATE all scores photo start and name are filled
+
+                if ($("#name").val() === "" ||
+                    $("#photoURL").val() === "" ||
+                    $("#q1").val() === "" ||
+                    $("#q2").val() === "" ||
+                    $("#q3").val() === "" ||
+                    $("#q4").val() === "" ||
+                    $("#q5").val() === "" ||
+                    $("#q6").val() === "" ||
+                    $("#q7").val() === "" ||
+                    $("#q8").val() === "" ||
+                    $("#q9").val() === "" ||
+                    $("#q10").val() === "") {
+
+                    alert("Please fill out all fields before submitting!");
+                    return;
+                }
+
+                let scoreArray = [];
+
+                for (let i = 1; i < 11; i++) {
+                    const questionValue = $("#q" + i).val();
+                    scoreArray.push(questionValue);
+                }
+
+                const newSurvey = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photoURL").val().trim(),
+                    scores: scoreArray
+                }
+
+                $.post("/api/friends", newSurvey,
+                    (data) => {
+                        if (data) {
+                            const imageMatch = "<img src=" + data.photo + " class='ml-2' width='250'>";
+                            const nameMatch = '<h2 class="name text-center">' + data.name + '</h2>';
+
+                            $("#modal-body").empty();
+                            $("#modal-body").append(imageMatch, nameMatch);
+                            $("#modalMatch").modal();
+                        }
+                    }
+                );
+            });
+        </script>
+</body>
+
+</html>
