@@ -1,3 +1,4 @@
+// SERVER SETUP
 const express = require('express');
 const app = express();
 
@@ -7,8 +8,15 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 8080;
 
-var friendsList = require('./data/friends');
 
+
+// CUSTOM JS
+var friendsList = require('./data/friends');
+const helper = require('./helper');
+
+
+
+// ROUTING
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/survey.html');
 });
@@ -18,38 +26,23 @@ app.get('/api/friends', (req, res) => {
 });
 
 app.post('/api/friends', (req, res) => {
-    let scoreResults = [];
+    req.body.scores = helper.strToInt(req.body.scores);
+    const myScores = req.body.scores;
 
-    for (let i = 0; i < friendsList.length; i++) {
-        const friend = friendsList[i];
-
-        let scoreResult = 0;
-
-        for (let j = 0; j < friend.scores.length; j++) {
-            scoreResult += Math.abs(friend.scores[j] - req.body.scores[j]);
-        }
-
-        scoreResults.push(scoreResult);
-    }
-
-    let curMin = 50;
-    let closestMatch = 0;
-
-    for (let i = 0; i < scoreResults.length; i++) {
-        const curScore = scoreResults[i];
-
-        if (curScore < curMin) {
-            curMin = curScore;
-            closestMatch = i;
-        }
-    }
+    const scoreResults = helper.getRelativeScores(friendsList, myScores);
+    const closestMatch = helper.compareRelativeScores(scoreResults);
 
     friendsList.push(req.body);
 
     console.log(friendsList[closestMatch]);
+    console.log(req.body);
+    
     res.json(friendsList[closestMatch]);
 });
 
+
+
+// SERVER INIT
 app.listen(PORT, () => {
     console.log('App listening on PORT ' + PORT);
 });

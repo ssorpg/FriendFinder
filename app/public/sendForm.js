@@ -12,7 +12,9 @@ $("#submit").on("click", function (event) {
     const radios = $("input:checked");
 
     for (let i = 0; i < radios.length; i++) {
-        newScores.push($(radios[i]).val());
+        const curQScore = $(radios[i]).val()
+
+        newScores.push(curQScore);
     }
 
     const newSurvey = {
