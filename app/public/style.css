@@ -1,0 +1,28 @@
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+.name-text {
+    font-size: 30px;
+}
+.bold-me {
+    font-weight: bold;
+}
+.red-star {
+    color: red;
+}
+.photo-text {
+    font-size: 24px;
+}
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    color: #343a40;
+}
+h4 {
+    font-size: 16px;
+    line-height: 16px;
+}

@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+app.use('/public', express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -21,7 +22,7 @@ app.post('/api/friends', (req, res) => {
 
     for (let i = 0; i < friendsList.length; i++) {
         const friend = friendsList[i];
-        
+
         let scoreResult = 0;
 
         for (let j = 0; j < friend.scores.length; j++) {
@@ -36,7 +37,7 @@ app.post('/api/friends', (req, res) => {
 
     for (let i = 0; i < scoreResults.length; i++) {
         const curScore = scoreResults[i];
-        
+
         if (curScore < curMin) {
             curMin = curScore;
             closestMatch = i;
@@ -45,6 +46,7 @@ app.post('/api/friends', (req, res) => {
 
     friendsList.push(req.body);
 
+    console.log(friendsList[closestMatch]);
     res.json(friendsList[closestMatch]);
 });
 
