@@ -5,7 +5,7 @@ app.use('/public', express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 var friendsList = require('./data/friends');
 
