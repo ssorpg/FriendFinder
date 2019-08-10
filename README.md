@@ -6,10 +6,10 @@
 
 <h2>Directions</h2>
 
-Go to https://murmuring-taiga-60273.herokuapp.com/ and complete the survey to find a potentially incredible new friend!
+Go to https://friendfinder-ssorpg.herokuapp.com/ and complete the survey to find a potentially incredible new friend!
 
 <br>
 <br>
 
 <h2>API</h2>
-Visit https://murmuring-taiga-60273.herokuapp.com/api/friends to see a complete list of available friends to match with in JSON form.
+Visit https://friendfinder-ssorpg.herokuapp.com/api/friends to see a complete list of available friends to match with in JSON form.
